@@ -5,22 +5,22 @@ const SCREEN_WIDTH = Dimensions.get("window").width; // Screen width
 const SCREEN_HEIGHT = Dimensions.get("window").height; // Screen height
 
 const OnboardingItem = ({ item }) => {
-  console.log(item)
+
  
   return (
     <View
-      style={{ width: SCREEN_WIDTH, height: SCREEN_HEIGHT }} // Fullscreen dimensions
-      className="flex-1 bg-white"
+      style={{ width: SCREEN_WIDTH,  }} // Fullscreen dimensions
+      className=""
     >
  
       <Image
         source={item?.image}
-        className="h-1/2 w-full"
+        className="h-2/3 w-full"
         resizeMode="cover"
       />
 
 
-      <View className="bg-white px-6 py-4 ">
+      <View className=" px-6 py-4 ">
         <Text className="text-3xl font-bold mb-4 text-gray-800 text-center">
           {item?.title}
         </Text>
