@@ -1,32 +1,37 @@
-import { Image, StyleSheet, Platform, View, Text, SafeAreaView } from "react-native";
+import Community from "@/components/Home/Community";
+import School from "@/components/Home/School";
+import VideoScreen from "@/components/Home/Video";
 
-
+import {
+  Image,
+  StyleSheet,
+  Platform,
+  View,
+  Text,
+  TouchableOpacity,
+  ScrollView,
+} from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function HomeScreen() {
   return (
-    <>
-      <SafeAreaView>
-        <Text>Home</Text>
-      </SafeAreaView>
-    </>
+    <ScrollView
+      showsVerticalScrollIndicator={false}
+      className="flex-1 bg-white"
+    >
+      <View className="flex-[0.4] justify-center items-start p-12 bg-green-100">
+        <Text className="text-3xl font-semibold mb-4">Hey User!</Text>
+        <Text className="text-left mb-6 leading-6">
+          You have no active scholarships. Join the #alteryouthrevoulution and
+          start your journey.
+        </Text>
+        <TouchableOpacity className="bg-green-400 w-full py-4 rounded-lg">
+          <Text className="text-center font-semibold text-white">
+            START SCHOLARSHIPS
+          </Text>
+        </TouchableOpacity>
+      </View>
+      <Community />
+    </ScrollView>
   );
 }
-
-const styles = StyleSheet.create({
-  titleContainer: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: 8,
-  },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
-  },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: "absolute",
-  },
-});

@@ -13,12 +13,12 @@ import "react-native-reanimated";
 // Import your global CSS file
 import "../global.css";
 import { useColorScheme } from "@/hooks/useColorScheme";
+import Header from "@/components/ui/Header";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
-
   const [loaded] = useFonts({
     SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf"),
   });
@@ -32,10 +32,10 @@ export default function RootLayout() {
   if (!loaded) {
     return null;
   }
-  
 
   return (
     <>
+      <Header />
       <Stack screenOptions={{ headerShown: false }}>
         {/* <Stack.Screen name="(tabs)" options={{ headerShown: false }} /> */}
         <Stack.Screen name="+not-found" />
