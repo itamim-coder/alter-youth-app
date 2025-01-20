@@ -4,8 +4,8 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 const Header = () => {
   return (
-    <SafeAreaView className="flex justify-center items-center py-3 ">
-      <Text className="text-2xl font-semibold ">Alteryouth</Text>
+    <SafeAreaView className="flex justify-center items-center pb-3 ">
+      <Text className="text-2xl font-semibold text-green-500">Alteryouth</Text>
     </SafeAreaView>
   );
 };

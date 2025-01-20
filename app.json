@@ -15,7 +15,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.imtiaztamim.alteryouthapp"
     },
     "web": {
       "bundler": "metro",
@@ -26,18 +27,24 @@
       "expo-router",
       [
         "expo-splash-screen",
-        
         {
           "image": "./assets/images/splash-icon.png",
           "imageWidth": 200,
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
-     
         }
       ]
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "cb3f9d68-d7e9-4851-aba3-5830012da56a"
+      }
     }
   }
 }

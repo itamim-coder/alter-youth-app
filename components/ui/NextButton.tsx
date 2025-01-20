@@ -38,7 +38,7 @@ const NextButton = ({ percentage, scrollTo }) => {
     );
   });
   return (
-    <View className="justify-center items-center">
+    <View className="justify-center items-center flex-1">
       {/* SVG for Circular Progress */}
       <Svg width={size} height={size} color="#ffffff">
         {/* Background Circle */}
@@ -53,7 +53,7 @@ const NextButton = ({ percentage, scrollTo }) => {
           {/* Progress Circle */}
           <Circle
             ref={progressRef}
-            stroke="#F4438F"
+            stroke="#1dc468"
             cx={center}
             cy={center}
             r={radius}
@@ -77,7 +77,7 @@ const NextButton = ({ percentage, scrollTo }) => {
         <TouchableOpacity
           onPress={scrollTo}
           style={{
-            backgroundColor: "#F4438F",
+            backgroundColor: "#1dc468",
             borderRadius: 50,
             padding: 16,
           }}
